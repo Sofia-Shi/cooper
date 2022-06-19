@@ -11,30 +11,30 @@ the solution of the constrained problem.
 
 Recall that we consider constrained minimization problems (CMPs) expressed as:
 
-.. math::
+$$
     \min_{x \in \Omega} & \,\, f(x) \\
     \text{s.t. } & \,\, g(x) \le \mathbf{0} \\
                  & \,\, h(x) = \mathbf{0}
-
+$$
 Lagrangian Formulation
 ----------------------
 
 The *Lagrangian* problem associated with the CMP above is given by:
 
-.. math::
-    \min_{x \in \Omega} \max_{\lambda_g \ge 0, \, \lambda_h} \mathcal{L}(x,\lambda) \triangleq f(x) + \lambda_g^{\top} g(x) + \lambda_h^{\top} h(x)
-
-The vectors :math:`\lambda_g` and :math:`\lambda_h` are called the **Lagrange
+$$
+    \min{x \in \Omega} \max{\lambda_g \ge 0, \, \lambda_h} \mathcal{L}(x,\lambda) \triangleq f(x) + \lambda_g^{\top} g(x) + \lambda_h^{\top} h(x)
+$$
+The vectors $`\lambda_g`$ and $\lambda_h$ are called the **Lagrange
 multipliers** or **dual variables** associated with the CMP. Observe that
-:math:`\mathcal{L}(x,\lambda)` is a concave function of :math:`\lambda` regardless
+$`\mathcal{L}(x,\lambda)`$ is a concave function of $`\lambda`$ regardless
 of the convexity properties of :math:`f, g` and :math:`h`.
 
 A pair :math:`(x^*,\lambda^*)` is called a *saddle-point* of
 :math:`\mathcal{L}(x,\lambda)` if for all :math:`(x,\lambda)`,
 
-.. math::
+$$
     \mathcal{L}(x^*,\lambda) \le \mathcal{L}(x^*,\lambda^*) \le \mathcal{L}(x,\lambda^*).
-
+$$
 
 This approach can be interpreted as a zero-sum two-player game, where the
 "primal" player :math:`x` aims to minimize :math:`\mathcal{L}(x,\lambda)` and
